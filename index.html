@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CRYPTOS</title>
+        <link></link>
+        <script src="./js/code.js"></script>
+
+    </head>
+
+<body>
+
+<h1>Data</h1>
+
+<form id="dataform" method="POST">
+    <label for="crypto_list">Selecciona una criptomoneda:</label>
+    <select name="crypto_list" id="crypto_select" form="dataform">
+        <option value="no-value">Selecciona un valor</option>
+    </select>
+    <input name="response" type="hidden" id="response">
+    <br />
+    <label for="currencies_list">Selecciona una moneda:</label>
+    <select name="currencies_list" id="currencies_select" form="dataform">
+        <option value="no-value">Selecciona un valor</option>
+    </select>
+    <br />
+    <button type="button" id="saveData">Save Data</button>
+</form>
+
+<div id="symbol-info">
+    <h1>Orders</h1>
+    <h2 id="symbol-name"></h2>
+    <h3 id="filter-action"></h3>
+    <form id="filterform" method="POST">
+        <input name="id_symbol" type="hidden" id="id_symbol">
+        <input name="result_filter" type="hidden" id="result_filter">
+        <label for="filter_list">Filtro:</label>
+        <select name="filter_list" id="filter_select" form="filterform">
+            <option value="no-value" selected>Selecciona el filtro que quieras implementar</option>
+            <option value="1">Ordenar orders por orden(por numero)>De num.menor a mayor</option>
+            </option>
+        </select>
+    <button type="button" id="getOrder">Get Order</button>
+    </form>
+</div>
+<div id="bid-info">
+
+</div>
+<div id="ask-info">
+
+</div>
+</body>
+</html>
